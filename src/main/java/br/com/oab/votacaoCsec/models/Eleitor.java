@@ -20,17 +20,17 @@ public class Eleitor {
 	@Getter
 	@Setter
 	private Long id;
-	
+
 	@Getter
 	@Setter
 	@NotNull
 	private String nome;
-	
+
 	@Getter
 	@Setter
 	@NotNull
 	private String login;
-	
+
 	@Getter
 	@Setter
 	@NotNull

@@ -7,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,20 +19,20 @@ public class Mesario {
 	@Getter
 	@Setter
 	private Long id;
-	
+
+	@NotNull
 	@Getter
 	@Setter
-	@NotNull
 	private String nome;
-	
+
+	@NotNull
 	@Getter
 	@Setter
-	@NotNull
 	private String login;
-	
+
+	@NotNull
 	@Getter
 	@Setter
-	@NotNull
 	private String senha;
 
 }
