@@ -17,10 +17,10 @@ import br.com.oab.votacaoCsec.service.EleitorService;
 
 @Controller
 public class EleitorController {
-	
+
 	@Autowired
 	EleitorService eleitorService;
-	
+
 	@RequestMapping(value = "/eleitores", method = RequestMethod.GET)
 	public ModelAndView getEleitores() {
 		ModelAndView mv = new ModelAndView("eleitores");
@@ -28,7 +28,7 @@ public class EleitorController {
 		mv.addObject("eleitores", eleitores);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/eleitores/{id}", method = RequestMethod.GET)
 	public ModelAndView getEleitorDetails (@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("eleitorDetails");
@@ -36,22 +36,21 @@ public class EleitorController {
 		mv.addObject("eleitor", eleitor);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/neweleitor", method = RequestMethod.GET)
 	public String getEleitorForm () {
 		return "eleitorForm";
 	}
-	
+
 	@RequestMapping(value = "/neweleitor", method = RequestMethod.POST)
 	public String saveEleitor (@Validated Eleitor eleitor, BindingResult result, RedirectAttributes attributes) {
 		if (result.hasErrors()) {
 			return "redirect:/neweleitor";
 		}
-		
-//		eleitor.setDataSessao(LocalDate.now());
-//		sessaoService.save(eleitor);
+
+		eleitorService.save(eleitor);
 		return "redirect:/eleitores";
-		
+
 	}
-	
+
 }

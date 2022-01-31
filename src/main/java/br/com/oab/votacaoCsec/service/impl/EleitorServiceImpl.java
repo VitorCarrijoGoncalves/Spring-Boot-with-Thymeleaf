@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import br.com.oab.votacaoCsec.models.Eleitor;
 import br.com.oab.votacaoCsec.repository.EleitorRepository;
 import br.com.oab.votacaoCsec.service.EleitorService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EleitorServiceImpl implements EleitorService {
 
 	@Autowired

@@ -49,8 +49,8 @@ public class Sessao {
 	private String tipoPartes;
 	
 	@NotNull
-	@Getter
-	@Setter
+//	@Getter
+//	@Setter
 	private String relatorConselheiro;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
@@ -58,4 +58,11 @@ public class Sessao {
 	@Setter
 	private LocalDate dataSessao;
 
+	public String getRelatorConselheiro() {
+		return relatorConselheiro;
+	}
+
+	public void setRelatorConselheiro(String relatorConselheiro) {
+		this.relatorConselheiro = relatorConselheiro;
+	}
 }
