@@ -46,6 +46,8 @@ public class SessaoController {
 	@RequestMapping(value = "/newsessao", method = RequestMethod.POST)
 	public String saveSessao (@Validated Sessao sessao, BindingResult result, RedirectAttributes attributes) {
 		if (result.hasErrors()) {
+			attributes.addFlashAttribute("mensagem", "Verifique se os campos obrigatórios " +
+					"foram preenchidos");
 			return "redirect:/newsessao";
 		}
 		

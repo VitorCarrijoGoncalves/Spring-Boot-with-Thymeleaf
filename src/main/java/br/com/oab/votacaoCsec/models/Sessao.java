@@ -19,44 +19,76 @@ public class Sessao {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Getter
-	@Setter
 	private Long id;
 	
 	@NotNull
-	@Getter
-	@Setter
 	private String pauta;
 	
 	@NotNull
-	@Getter
-	@Setter
 	private String tema;
 	
 	@NotNull
-	@Getter
-	@Setter
 	private Long numeroProcesso;
 
 	@NotNull
-	@Getter
-	@Setter
 	private String camara;
 	
 	@NotNull
-	@Getter
-	@Setter
 	private String tipoPartes;
 	
 	@NotNull
-//	@Getter
-//	@Setter
 	private String relatorConselheiro;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-	@Getter
-	@Setter
 	private LocalDate dataSessao;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getPauta() {
+		return pauta;
+	}
+
+	public void setPauta(String pauta) {
+		this.pauta = pauta;
+	}
+
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+
+	public Long getNumeroProcesso() {
+		return numeroProcesso;
+	}
+
+	public void setNumeroProcesso(Long numeroProcesso) {
+		this.numeroProcesso = numeroProcesso;
+	}
+
+	public String getCamara() {
+		return camara;
+	}
+
+	public void setCamara(String camara) {
+		this.camara = camara;
+	}
+
+	public String getTipoPartes() {
+		return tipoPartes;
+	}
+
+	public void setTipoPartes(String tipoPartes) {
+		this.tipoPartes = tipoPartes;
+	}
 
 	public String getRelatorConselheiro() {
 		return relatorConselheiro;
@@ -64,5 +96,13 @@ public class Sessao {
 
 	public void setRelatorConselheiro(String relatorConselheiro) {
 		this.relatorConselheiro = relatorConselheiro;
+	}
+
+	public LocalDate getDataSessao() {
+		return dataSessao;
+	}
+
+	public void setDataSessao(LocalDate dataSessao) {
+		this.dataSessao = dataSessao;
 	}
 }
