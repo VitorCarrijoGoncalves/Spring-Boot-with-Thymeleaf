@@ -17,28 +17,57 @@ public class Eleitor {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Getter
-	@Setter
 	private Long id;
 
-	@Getter
-	@Setter
 	@NotNull
 	private String nome;
 
-	@Getter
-	@Setter
 	@NotNull
 	private String login;
 
-	@Getter
-	@Setter
 	@NotNull
 	private String senha;
-	
-	@Getter
-	@Setter
+
 	@NotNull
 	private String voto;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getVoto() {
+		return voto;
+	}
+
+	public void setVoto(String voto) {
+		this.voto = voto;
+	}
 }
